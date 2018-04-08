@@ -14,7 +14,7 @@ export function restEncounter(state: GameState): GameState {
       ),
       smallEffort: Math.min(
         maxResources.smallEffort,
-        state.resources.smallEffort + encounter.cost.time
+        state.resources.smallEffort + encounter.cost.time - (state.conditions.afraid ? 1 : 0)
       )
     }
   };
