@@ -10,7 +10,7 @@ export function restEncounter(state: GameState): GameState {
       ...state.resources,
       time: Math.max(
         0,
-        state.resources.time - encounter.cost.time
+        state.resources.time - encounter.cost.time - (state.conditions.crippled ? 1 : 0)
       ),
       smallEffort: Math.min(
         maxResources.smallEffort,

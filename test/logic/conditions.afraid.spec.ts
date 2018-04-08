@@ -4,7 +4,7 @@ import {testState} from '../helpers';
 import {GameState, Event} from '../../types';
 import {tick} from '../../src/logic';
 
-test('resting when afraid gains 1 less effort', t => {
+test('the afraid condition', t => {
 
   const start = testState({
     conditions: {
