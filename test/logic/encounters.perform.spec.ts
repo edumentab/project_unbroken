@@ -9,9 +9,9 @@ test('performing encounters works as expected', t => {
   {
     const start = testState({
       resources: {
-        mediumEffort: 2,
         time: 3,
-        cunning: 3
+        cunning: 3,
+        mediumEffort: 5
       },
       encounters: {
         revealed: ['crypticMarkings'], // cost {time: 2, mediumEffort: 1}, gives {cunning: 2}
@@ -24,21 +24,20 @@ test('performing encounters works as expected', t => {
   
     const expected = testState({
       resources: {
-        mediumEffort: 1,
         time: 1,
-        cunning: 5
+        cunning: 5,
+        mediumEffort: 5
       },
       encounters: start.encounters,
       stack: [{type: 'EncounterAfter'}, {type: '_TestEvent'}]
     });
     
-    t.deepEqual(result, expected, 'encounter cost is subtracted, gains are added, after hook is queued');
+    t.deepEqual(result, expected, 'encounter time is subtracted, gains are added, after hook is queued');
   }
 
   {
     const start = testState({
       resources: {
-        mediumEffort: 2,
         time: 1,
         cunning: 6
       },
@@ -54,7 +53,6 @@ test('performing encounters works as expected', t => {
   
     const expected = testState({
       resources: {
-        mediumEffort: 1,
         time: 0,
         cunning: 7
       },

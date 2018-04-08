@@ -7,6 +7,7 @@ export type EncounterChoose = {type: 'EncounterChoose', index: number, how: Enco
 export type EncounterClear = {type: 'EncounterClear'};
 export type EncounterPerform = {type: 'EncounterPerform'};
 export type EncounterRest = {type: 'EncounterRest'};
+export type PayInit = {type: 'PayInit'};
 
 export type Event =
   | _TestEvent
@@ -15,4 +16,5 @@ export type Event =
   | EncounterClear
   | EncounterPerform
   | EncounterRest
+  | PayInit
 ;

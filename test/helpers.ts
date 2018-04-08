@@ -24,7 +24,11 @@ const defaults: GameState = {
   weapon: 'bareHands',
   conditions: {},
   stack: [],
-  encounters: encounterDefaults
+  encounters: encounterDefaults,
+  payments: {
+    toPay: {},
+    paid: {}
+  }
 };
 
 export function testState(opts: TestStateOpts): GameState {

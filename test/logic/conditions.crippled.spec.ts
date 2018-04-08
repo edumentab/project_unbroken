@@ -58,7 +58,7 @@ test('the crippled condition', t => {
     const expected = testState({
       ...start,
       resources: {
-        mediumEffort: 1,
+        mediumEffort: 2,
         time: 2,
         cunning: 5
       },

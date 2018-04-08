@@ -1,7 +1,7 @@
 import {Resources, Gain, Range0to7} from './';
 
 export type EncounterCost = Resources & {
-  time: Range0to7
+  time: Range0to7 // make it mandatory
   commit?: boolean
 }
 

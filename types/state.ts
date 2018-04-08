@@ -12,5 +12,9 @@ export type GameState = {
   weapon: WeaponName
   conditions: Conditions,
   stack: Event[],
-  encounters: EncounterState
+  encounters: EncounterState,
+  payments: {
+    toPay: Resources,
+    paid: Resources
+  }
 };
